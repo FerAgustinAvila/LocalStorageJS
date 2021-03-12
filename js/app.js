@@ -55,7 +55,10 @@ function mostrarError(error) {
      mensajeEerror.classList.add('error');
 
      const contenido = document.querySelector('#contenido');
-     contenido.appendChild(mensajeEerror);
+     const errores = document.querySelectorAll('.error');
+     if ( errores.length === 0) {
+          contenido.appendChild(mensajeEerror);
+     }     
 
      setTimeout(() => {
           mensajeEerror.remove();
